@@ -16,10 +16,10 @@ export const Avatar = ({
     ...props }: AvatarProps) => {
     const formats = format ? 'component-avatar--square' : 'component-avatar--round'
     return (
-        <div
-            className={['component-avatar', `component-avatar--${size}`,`component-avatar--${format}`, formats].join(' ')}
-            {...props}>
-        </div>
+        <img 
+        className={['component-avatar', `component-avatar--${size}`,`component-avatar--${format}`, formats].join(' ')}
+        src={`${img}`}
+        {...props}/>
     )
 }
 
