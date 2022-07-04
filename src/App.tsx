@@ -20,14 +20,6 @@ function App() {
           Learn React
         </a>
       </header>
-
-      <Avatar
-        backgroundColor="#ababab"
-        format="square"
-        img="https://img1.ak.crunchyroll.com/i/spire4/d3ccf00d42fbb3b1da9a7102617ac5671647251983_main.jpg"
-        name="Raul Henrique"
-        size="small"
-      />
     </div>
   );
 }

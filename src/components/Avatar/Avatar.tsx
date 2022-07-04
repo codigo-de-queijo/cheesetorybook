@@ -6,7 +6,6 @@ interface AvatarProps {
     format?: 'square' | 'round';
     img?: string;
     name?: string;
-    backgroundColor: string;
 }
 
 export const Avatar = ({
@@ -15,10 +14,10 @@ export const Avatar = ({
     format,
     size = 'small',
     ...props }: AvatarProps) => {
-    const formats = format ? 'component-avatar--square' : 'component-avatar--circle'
+    const formats = format ? 'component-avatar--square' : 'component-avatar--round'
     return (
         <div
-            className={['component-avatar', `component-avatar--${size}`, formats].join(' ')}
+            className={['component-avatar', `component-avatar--${size}`,`component-avatar--${format}`, formats].join(' ')}
             {...props}>
         </div>
     )

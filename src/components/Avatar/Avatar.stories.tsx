@@ -7,7 +7,6 @@ export default {
     title: 'Avatar',
     component: Avatar,
     argTypes: {
-        backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Avatar>;
 
@@ -16,6 +15,8 @@ const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />
 export const Small = Template.bind({});
 Small.args = {
     size: 'small',
+    format: 'square'
+
 }
 
 export const Normal = Template.bind({});

@@ -1,29 +1,30 @@
 .component-avatar {
     width: unset;
     height: unset;
-    background-color: black;
+    background-color: #737373;
 }
 
-.component-avatar--square--small {
+.component-avatar--small {
     width: 16px;
     height: 16px;
-    background-color: red;
 }
 
-.component-avatar--square--medium {
+.component-avatar--normal {
     width: 32px;
     height: 32px;
-    background-color: green;
 }
 
-.component-avatar--square--big {
+.component-avatar--big {
     width: 64px;
     height: 64px;
-    background-color: blue;
 }
 
-.component-avatar--square--omg {
+.component-avatar--omg {
     width: 128px;
     height: 128px;
-    background-color: pink;
+}
+
+
+.component-avatar--round{
+    border-radius: 100%;
 }
