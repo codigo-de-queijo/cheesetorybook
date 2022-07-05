@@ -1,4 +1,3 @@
-import { any } from "prop-types";
 import React from "react";
 import './avatar.css'
 
@@ -16,16 +15,16 @@ export const Avatar: React.FC<AvatarProps> = ({
     img,
     format = "square",
     size,
-    ...props }) => {
-    const formats = format ? 'component-avatar--square' : 'component-avatar--round'
+    }) => {
+    const formats = format == 'square' ? 'component-avatar--square' : 'component-avatar--round'
     return (
-        <div>
+        <>
             <img
-                className={['component-avatar', `component-avatar--${size}`, `component-avatar--${format}`, formats].join(' ')}
+                className={`component-avatar component-avatar--${size} component-avatar--${format}`}
                 src={img}
-                {...props}
+                alt={name}
             />
-        </div>
+        </>
 
     )
 }
