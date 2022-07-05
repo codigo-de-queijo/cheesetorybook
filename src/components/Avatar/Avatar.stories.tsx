@@ -1,22 +1,20 @@
-import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
 import { Avatar } from "./Avatar";
 
 export default {
     title: 'Avatar',
     component: Avatar,
-    argTypes: {
-    },
+    argTypes: {},
 } as ComponentMeta<typeof Avatar>;
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />
+
+
 
 export const Small = Template.bind({});
 Small.args = {
     size: 'small',
     format: 'square',
-
 }
 
 export const Normal = Template.bind({});
