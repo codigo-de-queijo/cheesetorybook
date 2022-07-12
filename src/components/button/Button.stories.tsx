@@ -9,10 +9,11 @@ export default {
     component: Button,
 
     argTypes: {
-        backgroundColor: { control: 'color'}, click: { action: 'clicked' },
+        backgroundColor: { control: 'color'}, 
+        click: { action: 'clicked' },
     },
 
-    } as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}/>;
 
@@ -21,71 +22,58 @@ export const Primary = Template.bind({});
 Primary.args = {
     primary: true,
     label: 'Primary',
-    click: () => {
-        alert('Este é um botão primário');
-    }
+    click: () => alert('Este é um botão Primário!'),
+    type: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
     label: 'Secondary',
-    click: () => {
-        alert('Este é um botão secundário');
-    }
+    click: () => alert('Este é um botão Secundário!'),
+    type: 'secondary',
+    
 };
 
 export const Success = Template.bind({});
 Success.args = {
     label: 'Success',
-    backgroundColor: 'green',
-    click: () => {
-        alert('Sucessoooo!!');
-    }
+    click: () => alert('Este é um botão Success!'),
+    type: 'success',
 };
 
 export const Danger = Template.bind({});
 Danger.args = {
     label: 'Danger',
-    backgroundColor: 'red',
-    click: () => {
-        alert('Perigoo!');
-    }
+    click: () => alert('Este é um botão Danger!'),
+    type: 'danger',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
     label: 'Warning',
-    backgroundColor: 'orange',
-    click: () => {
-        alert('Warning!');
-    }
+    click: () => alert('Cuidado ao apertar este botão!'),
+    type: 'warning',
 };
 
 export const Info = Template.bind({});
 Info.args = {
     label: 'Info',
-    backgroundColor: 'rgba(255, 155, 155, 0.466)',
-    click: () => {
-        alert('Info');
-    }
+    click: () => alert('Este botão é Informativo!'),
+    type: 'info',
 };
 
 export const Light = Template.bind({});
 Light.args = {
     label: 'Light',
-    backgroundColor: '#B0C4DE',
-    click: () => {
-        alert('Light');
-    }
+    click: () => alert('Este é um botão Light!'),
+    type: 'light',
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
     label: 'Dark',
-    backgroundColor: '#8A2BE2',
-    click: () => {
-        alert('Dark');
-    }
+    click: () => alert('Este é um botão Dark'),
+    type: 'dark',
 };
 
 

@@ -1,4 +1,3 @@
-import { type } from "os";
 import React, { Children } from "react";
 import './button.css';
 
@@ -7,7 +6,7 @@ interface ButtonProps {
     size?: 'small' | 'medium' | 'large'
     children?: React.ReactNode
     label?: string
-    type?: 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' 
+    type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'
     backgroundColor?: string
     click?: () => void
 
@@ -24,10 +23,13 @@ export const Button: React.FC<ButtonProps> = ({
     backgroundColor,
     click,
     ...props
+
 }) => {
-    const mode = primary ? 'component-button--primary' : 'component-button--secondary';
     return (
-        <button type="button" className={['component-button', `storybook-button--${size}`, `storybook-button--${type}`, mode].join(' ')} style={{ backgroundColor }} onClick = {click}>
+        <button 
+        type="button" 
+        className={`${size} ${type}`}
+        onClick = {click}>
             {children}{label}
         </button>
     )

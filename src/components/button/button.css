@@ -1,4 +1,4 @@
-.component-button {
+button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -6,15 +6,63 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  padding: 15px;
 }
 
-.component-button--primary {
+.primary {
+  background-color: rgb(84, 84, 223);
   color: #fff;
-  background-color: #1ea7fd;
+  width: 150px;
 }
 
-.component-button--secondary {
+.secondary {
+  background-color: rgb(21, 21, 122);
   color: #fff;
-  background-color: #0d78bb;
+  width: 150px;
 }
 
+.success {
+  background-color: rgb(53, 192, 48);
+  color: #fff;
+  width: 150px;
+}
+
+.danger {
+  background-color: rgb(214, 77, 67);
+  color: #fff;
+  width: 150px;
+}
+
+.warning {
+  background-color: rgb(231, 185, 59);
+  color: #fff;
+  width: 150px;
+}
+
+.info {
+  background-color: rgb(188, 188, 196);
+  color: rgb(0, 0, 0);
+  width: 150px;
+}
+
+.light {
+  background-color: rgb(210, 245, 245);
+  color: rgb(0, 0, 0);
+  width: 150px;
+}
+
+.light:hover {
+  box-shadow: 0 5px rgb(247, 247, 247);
+  transition: 1.5s;
+}
+
+.dark {
+  background-color: rgb(93, 18, 122);
+  color: rgb(255, 255, 255);
+  width: 150px;
+}
+
+.dark:hover {
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transition: 1.5s
+}
