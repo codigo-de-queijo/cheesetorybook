@@ -9,18 +9,17 @@ export default {
     component: Button,
 
     argTypes: {
-        backgroundColor: { control: 'color'}, 
+        backgroundColor: { control: 'color' },
         click: { action: 'clicked' },
     },
 
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args}/>;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-    primary: true,
     label: 'Primary',
     click: () => alert('Este é um botão Primário!'),
     type: 'primary',
@@ -31,7 +30,7 @@ Secondary.args = {
     label: 'Secondary',
     click: () => alert('Este é um botão Secundário!'),
     type: 'secondary',
-    
+
 };
 
 export const Success = Template.bind({});
