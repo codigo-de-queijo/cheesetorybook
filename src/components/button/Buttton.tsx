@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import './button.css';
 
 interface ButtonProps {
@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
     type,
     label,
     click,
-    ...props
+    
 
 }) => {
     return (
