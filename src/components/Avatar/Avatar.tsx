@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { useState } from "react";
 import './avatar.css';
 
 
@@ -29,12 +30,23 @@ export const Avatar: React.FC<AvatarProps> = ({
     format = "square",
     size,
 }) => {
+    const [hasNoImg, setHasNoImg] = useState(false)
+    const onerror = useCallback(() => setHasNoImg(true), [])
+    const noImg = !src || hasNoImg
     return (
-            <img
+        <div className={`avatar ${size} ${format}`}>
+            {(noImg || initials) && (
+                <p>{initials(name)}</p>
+            )}
+
+            {!noImg && (
+                <img
                 className={`avatar ${size} ${format}`}
                 src={src}
-                alt={initials(name)}
+                onError={onerror}
             />
+            )}
+        </div>
     )
 }
 

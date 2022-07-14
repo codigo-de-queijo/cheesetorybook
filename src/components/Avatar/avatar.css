@@ -2,9 +2,11 @@
     width: unset;
     height: unset;
     background-color: #737373;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: #fff;
 }
 
 .small {
