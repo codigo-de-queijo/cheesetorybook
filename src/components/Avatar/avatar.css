@@ -13,28 +13,24 @@
     width: 16px;
     height: 16px;
     font-size: 8px;
-    line-height: 16px;
 }
 
 .normal {
     width: 32px;
     height: 32px;
     font-size: 16px;
-    line-height: 32px;
 }
 
 .big {
     width: 64px;
     height: 64px;
     font-size: 32px;
-    line-height: 64px;
 }
 
 .omg {
     width: 128px;
     height: 128px;
     font-size: 64px;
-    line-height: 128px;
 }
 
 .round {

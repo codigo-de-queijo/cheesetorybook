@@ -20,7 +20,7 @@ const initials = (fullName: string | undefined): string | undefined => {
     if (firstName === lastName) {
         return `${firstName[0]}.`;
     }
-    return `${firstName[0]}${lastName[0]}`
+    return `${firstName[0]}${lastName[0]}`;
 }
 
 
@@ -30,23 +30,25 @@ export const Avatar: React.FC<AvatarProps> = ({
     format = "square",
     size,
 }) => {
-    const [hasNoImg, setHasNoImg] = useState(false)
-    const onerror = useCallback(() => setHasNoImg(true), [])
-    const noImg = !src || hasNoImg
+    const [hasNoImg, setHasNoImg] = useState(false);
+    const onerror = useCallback(() => setHasNoImg(true), []);
+    const noImg = !src || hasNoImg;
+
+    if (noImg && initials) {
+        return (
+            <div className={`avatar ${size} ${format}`}>
+                <p>{initials(name)}</p>
+            </div>
+        );
+    }
     return (
         <div className={`avatar ${size} ${format}`}>
-            {(noImg || initials) && (
-                <p>{initials(name)}</p>
-            )}
-
-            {!noImg && (
-                <img
+            <img
                 className={`avatar ${size} ${format}`}
                 src={src}
                 onError={onerror}
             />
-            )}
         </div>
-    )
+    );
 }
 
