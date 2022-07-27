@@ -9,8 +9,6 @@ export default {
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />
 
-
-
 export const Small = Template.bind({});
 Small.args = {
     size: 'small',

@@ -8,6 +8,8 @@ interface AvatarProps {
     format?: 'square' | 'round';
     name?: string;
     src?: string;
+    handlemouseover?: () => void
+    handlemouseout?: () => void
 }
 
 const initials = (fullName: string | undefined): string | undefined => {
