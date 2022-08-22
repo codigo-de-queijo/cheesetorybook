@@ -1,0 +1,80 @@
+button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.primary {
+  background-color: rgb(84, 84, 223);
+  color: #fff;
+}
+
+.secondary {
+  background-color: rgb(21, 21, 122);
+  color: #fff;
+
+}
+
+.success {
+  background-color: rgb(53, 192, 48);
+  color: #fff;
+
+}
+
+.danger {
+  background-color: rgb(214, 77, 67);
+  color: #fff;
+
+}
+
+.warning {
+  background-color: rgb(231, 185, 59);
+  color: #fff;
+}
+
+.info {
+  background-color: rgb(188, 188, 196);
+  color: rgb(0, 0, 0);
+}
+
+.light {
+  background-color: rgb(210, 245, 245);
+  color: rgb(0, 0, 0);
+}
+
+.light:hover {
+  box-shadow: 0 5px rgb(247, 247, 247);
+  transition: 1.5s;
+}
+
+.dark {
+  background-color: rgb(93, 18, 122);
+  color: rgb(255, 255, 255);
+}
+
+.dark:hover {
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transition: 1.5s
+}
+
+.small {
+  min-width: 100px;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.medium {
+  min-width: 120px;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+.large {
+  min-width: 180px;
+  padding: 20px;
+  letter-spacing: 5px;
+}
