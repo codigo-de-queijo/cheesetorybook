@@ -1,34 +1,31 @@
 import React from "react";
 import { Items } from "./Items";
-import './breadcrumb.css'
+import styles from './breadcrumb.module.scss'
+
 
 
 interface BreadcrumbProps {
-    separator?: "—" | "/" | "➡",
-    items: Items[],
+    separator?: '—' | '/' | '➡',
+    items: Items[];
 }
 
 export const Breadcrumb: React.FC<BreadcrumbProps> = ({
-    separator = "—",
+    separator = '-',
     items,
 }) => {
 
+
+
     return (
-        <ul className="breadcrumbList">
-            {items.map((items) => {
+        <div className={styles.breadcrumbList}>
+            {items.map((item) => {
                 return (
                     <>
-                        <li>
-                            <a href={items.url} target="_blank">
-                                {items.title}
-                            </a>
-                        </li>
-                        <span className="separator">
-                            {separator}
-                        </span>
+                        <span>{item.disabled ? item.title : <a href={item.url}>{item.title}</a>}</span>
+                        <span className={styles.separator}>{separator}</span>
                     </>
                 )
             })}
-        </ul>
+        </div>
     )
 }

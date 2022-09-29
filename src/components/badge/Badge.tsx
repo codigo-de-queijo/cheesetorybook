@@ -1,17 +1,17 @@
 import React from "react";
-import './badge.css';
+import './badge.scss';
 
-interface Props {
-    type: 'badgePrimary' | 'badgeSecondary' | 'badgeSuccess' | 'badgeDanger' | 'badgeWarning' | 'badgeInfo' | 'badgeLight' | 'badgeDark'
-}
+interface BProps {
+    type?: 'primaryBadge' | 'secondaryBadge' | 'successBadge' | 'infoBadge' | 'dangerBadge' | 'warningBadge' | 'lightBadge' | 'darkBadge'
+    label?: string
+ }
 
-export const Badge: React.FC<Props> = ({
+export const Badge: React.FC<BProps> = ({
     type,
+    label
+
 }) => {
     return (
-        <span className={`${type}`}>
-            Hello World!
-        </span>
+        <span className={`${type} badge`}>{label}</span>
     )
 }
-
